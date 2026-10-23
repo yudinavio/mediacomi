@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img"><rect width="800" height="600" fill="#EFE9DB"/>
+  <path d="M300 340 L400 250 L500 340 V430 H300 Z" fill="none" stroke="#287A50" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M270 345 L400 235 L530 345" fill="none" stroke="#D98262" stroke-width="10" stroke-linecap="round"/>
+  <text x="400" y="500" font-family="Georgia, serif" font-size="30" fill="#287A50" text-anchor="middle">Фото недоступно</text></svg>

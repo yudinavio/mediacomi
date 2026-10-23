@@ -1,0 +1,6 @@
+scripts/prepare-data.ts(16,16): error TS2307: Cannot find module 'node:fs' or its corresponding type declarations.
+scripts/prepare-data.ts(17,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+scripts/prepare-data.ts(120,5): error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+scripts/prepare-data.ts(125,5): error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+scripts/prepare-data.ts(174,5): error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+tests/scoring.test.ts(90,1): error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
