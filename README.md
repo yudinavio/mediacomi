@@ -44,26 +44,86 @@ npm run build
 npm run typecheck
 ```
 
-## 🌐 Деплой
+## 🌐 Деплой на GitHub Pages
 
-Проект — статический SPA, можно деплоить на любую хостинг-платформу:
+### Автоматический деплой через GitHub Actions (рекомендуется)
 
-### Vercel
+1. **Запушьте код в ветку `mediakomi-service-prototype-06627`:**
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin mediakomi-service-prototype-06627
+   ```
+
+2. **Включите GitHub Pages в настройках репозитория:**
+   - Перейдите в **Settings** → **Pages**
+   - В разделе **Source** выберите **GitHub Actions**
+   - Workflow автоматически запустится при пуше
+
+3. **Дождитесь завершения деплоя** (~2-3 минуты)
+   - Статус можно посмотреть во вкладке **Actions**
+   - После успешного деплоя сайт будет доступен по адресу:
+     ```
+     https://yudinavio.github.io/mediakomi/
+     ```
+
+### Ручной деплой через ветку `gh-pages`
+
+```bash
+# 1. Соберите проект
+npm run build
+
+# 2. Установите gh-pages
+npm install -D gh-pages
+
+# 3. Задеплойте папку dist
+npx gh-pages -d dist
+```
+
+### Ручной деплой через ветку `main`
+
+```bash
+# 1. Соберите проект
+npm run build
+
+# 2. Добавьте и запушьте папку dist
+git add dist -f
+git commit -m "Deploy to GitHub Pages"
+git subtree push --prefix dist origin gh-pages
+```
+
+После этого включите GitHub Pages в настройках репозитория:
+- **Settings** → **Pages** → **Source**: выберите ветку `gh-pages` и папку `/ (root)`
+
+### ⚠️ Важно для GitHub Pages
+
+Если ваш сайт будет доступен по адресу `username.github.io/mediakomi/` (не `username.github.io`), необходимо добавить base path в `vite.config.js`:
+
+```javascript
+export default defineConfig({
+  base: '/mediakomi/', // ← добавьте эту строку
+  plugins: [react(), tailwindcss()],
+  // ...
+});
+```
+
+Затем пересоберите проект:
+```bash
+npm run build
+```
+
+### Другие платформы
+
+**Vercel:**
 ```bash
 npm i -g vercel
 vercel
 ```
 
-### Netlify
+**Netlify:**
 ```bash
 npm run build
 # Загрузите папку dist/ в Netlify
-```
-
-### GitHub Pages
-```bash
-npm run build
-# Загрузите содержимое dist/ в gh-pages branch
 ```
 
 ## 🛠 Технологии
