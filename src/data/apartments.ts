@@ -1,0 +1,417 @@
+export interface Apartment {
+  id: number;
+  title: string;
+  address: string;
+  rooms: number;
+  area: number;
+  floor: number;
+  totalFloors: number;
+  price: number;
+  description: string;
+  images: string[];
+}
+
+const IMAGES = [
+  "https://image.qwenlm.ai/generated-images/d23f5b2a-a54c-435e-9d4e-47a92fe0403f/_result.png",
+  "https://image.qwenlm.ai/generated-images/a189a89c-887f-464a-abe0-75d9a7a7a304/_result.png",
+  "https://image.qwenlm.ai/generated-images/219261e6-52d5-4ffa-a3c8-5ae9bfb6dca7/_result.png",
+  "https://image.qwenlm.ai/generated-images/59f5d33e-f266-443f-8c63-05dbe2e07e90/_result.png",
+  "https://image.qwenlm.ai/generated-images/26ee9e84-d472-47db-918f-bcb58937275a/_result.png",
+];
+
+export const apartments: Apartment[] = [
+  {
+    id: 1,
+    title: "1-комнатная квартира",
+    address: "ул. Коммунистическая, 54",
+    rooms: 1,
+    area: 36,
+    floor: 3,
+    totalFloors: 5,
+    price: 3200000,
+    description: "Уютная однушка с хорошим ремонтом. Рядом школа и магазин.",
+    images: [IMAGES[0], IMAGES[4]],
+  },
+  {
+    id: 2,
+    title: "2-комнатная квартира",
+    address: "ул. Карла Маркса, 12",
+    rooms: 2,
+    area: 54,
+    floor: 7,
+    totalFloors: 9,
+    price: 4800000,
+    description: "Просторная двушка в новостройке. Панорамные окна, вид на город.",
+    images: [IMAGES[1], IMAGES[3]],
+  },
+  {
+    id: 3,
+    title: "Студия",
+    address: "ул. Морозова, 100",
+    rooms: 0,
+    area: 24,
+    floor: 2,
+    totalFloors: 10,
+    price: 2100000,
+    description: "Компактная студия с современной отделкой. Отличный вариант для молодой пары.",
+    images: [IMAGES[2], IMAGES[0]],
+  },
+  {
+    id: 4,
+    title: "3-комнатная квартира",
+    address: "ул. Октябрьский проспект, 77",
+    rooms: 3,
+    area: 72,
+    floor: 4,
+    totalFloors: 5,
+    price: 5900000,
+    description: "Семейная трёшка в центре. Два балкона, раздельные санузлы.",
+    images: [IMAGES[3], IMAGES[1]],
+  },
+  {
+    id: 5,
+    title: "1-комнатная квартира",
+    address: "ул. Сысольское шоссе, 1",
+    rooms: 1,
+    area: 40,
+    floor: 8,
+    totalFloors: 12,
+    price: 3600000,
+    description: "Светлая квартира в новом доме. Закрытый двор, паркинг.",
+    images: [IMAGES[0], IMAGES[2]],
+  },
+  {
+    id: 6,
+    title: "2-комнатная квартира",
+    address: "ул. Интернациональная, 33",
+    rooms: 2,
+    area: 48,
+    floor: 2,
+    totalFloors: 5,
+    price: 3900000,
+    description: "Кирпичный дом, тихий двор. Косметический ремонт, мебель остаётся.",
+    images: [IMAGES[1], IMAGES[4]],
+  },
+  {
+    id: 7,
+    title: "Студия",
+    address: "ул. Пушкина, 22",
+    rooms: 0,
+    area: 28,
+    floor: 5,
+    totalFloors: 9,
+    price: 2400000,
+    description: "Стильная студия с дизайнерским ремонтом. Вся техника в комплекте.",
+    images: [IMAGES[2], IMAGES[4]],
+  },
+  {
+    id: 8,
+    title: "3-комнатная квартира",
+    address: "ул. Бумажников, 8",
+    rooms: 3,
+    area: 68,
+    floor: 1,
+    totalFloors: 5,
+    price: 5200000,
+    description: "Первый этаж с отдельным входом. Подходит под коммерцию.",
+    images: [IMAGES[3], IMAGES[0]],
+  },
+  {
+    id: 9,
+    title: "1-комнатная квартира",
+    address: "ул. Ленина, 45",
+    rooms: 1,
+    area: 33,
+    floor: 4,
+    totalFloors: 5,
+    price: 2800000,
+    description: "Хрущёвка после капремонта. Новые трубы, пластиковые окна.",
+    images: [IMAGES[0], IMAGES[1]],
+  },
+  {
+    id: 10,
+    title: "2-комнатная квартира",
+    address: "ул. Гаражная, 15",
+    rooms: 2,
+    area: 58,
+    floor: 6,
+    totalFloors: 10,
+    price: 4500000,
+    description: "Евроремонт, встроенная кухня. Тихий район, развитая инфраструктура.",
+    images: [IMAGES[1], IMAGES[2]],
+  },
+  {
+    id: 11,
+    title: "Студия",
+    address: "ул. Космонавтов, 30",
+    rooms: 0,
+    area: 22,
+    floor: 3,
+    totalFloors: 8,
+    price: 1900000,
+    description: "Небольшая студия для сдачи в аренду. Хорошая транспортная доступность.",
+    images: [IMAGES[2], IMAGES[3]],
+  },
+  {
+    id: 12,
+    title: "3-комнатная квартира",
+    address: "ул. Орджоникидзе, 20",
+    rooms: 3,
+    area: 80,
+    floor: 9,
+    totalFloors: 12,
+    price: 7200000,
+    description: "Премиум-класс, панорамные окна, два санузла, гардеробная.",
+    images: [IMAGES[3], IMAGES[4]],
+  },
+  {
+    id: 13,
+    title: "1-комнатная квартира",
+    address: "ул. Мира, 18",
+    rooms: 1,
+    area: 38,
+    floor: 5,
+    totalFloors: 9,
+    price: 3400000,
+    description: "Угловая, но тёплая. Свежий ремонт, остаётся вся мебель.",
+    images: [IMAGES[0], IMAGES[3]],
+  },
+  {
+    id: 14,
+    title: "2-комнатная квартира",
+    address: "ул. Гагарина, 50",
+    rooms: 2,
+    area: 51,
+    floor: 3,
+    totalFloors: 5,
+    price: 4100000,
+    description: "Сталинка с высокими потолками. Кирпич, отличная звукоизоляция.",
+    images: [IMAGES[1], IMAGES[0]],
+  },
+  {
+    id: 15,
+    title: "Студия",
+    address: "ул. Энгельса, 7",
+    rooms: 0,
+    area: 26,
+    floor: 7,
+    totalFloors: 14,
+    price: 2600000,
+    description: "Новостройка, ключи в день сделки. Видовой этаж.",
+    images: [IMAGES[2], IMAGES[1]],
+  },
+  {
+    id: 16,
+    title: "3-комнатная квартира",
+    address: "ул. Советская, 40",
+    rooms: 3,
+    area: 65,
+    floor: 2,
+    totalFloors: 5,
+    price: 5500000,
+    description: "Распашонка, окна на две стороны. Рядом парк и набережная.",
+    images: [IMAGES[3], IMAGES[2]],
+  },
+  {
+    id: 17,
+    title: "1-комнатная квартира",
+    address: "ул. Первомайская, 62",
+    rooms: 1,
+    area: 42,
+    floor: 10,
+    totalFloors: 16,
+    price: 4000000,
+    description: "Современный ЖК, консьерж-сервис, подземный паркинг.",
+    images: [IMAGES[0], IMAGES[4]],
+  },
+  {
+    id: 18,
+    title: "2-комнатная квартира",
+    address: "ул. Гоголя, 25",
+    rooms: 2,
+    area: 46,
+    floor: 1,
+    totalFloors: 5,
+    price: 3500000,
+    description: "Требует ремонта, но хорошая планировка. Торг уместен.",
+    images: [IMAGES[1], IMAGES[3]],
+  },
+  {
+    id: 19,
+    title: "Студия",
+    address: "ул. Young Army, 5",
+    rooms: 0,
+    area: 20,
+    floor: 4,
+    totalFloors: 7,
+    price: 1700000,
+    description: "Мини-студия, идеальна под сдачу. Полностью меблирована.",
+    images: [IMAGES[2], IMAGES[0]],
+  },
+  {
+    id: 20,
+    title: "3-комнатная квартира",
+    address: "ул. Куратова, 88",
+    rooms: 3,
+    area: 75,
+    floor: 6,
+    totalFloors: 10,
+    price: 6500000,
+    description: "Бизнес-класс, дизайнерский ремонт, тёплый пол, кондиционеры.",
+    images: [IMAGES[3], IMAGES[1]],
+  },
+  {
+    id: 21,
+    title: "1-комнатная квартира",
+    address: "ул. Кирова, 14",
+    rooms: 1,
+    area: 35,
+    floor: 2,
+    totalFloors: 5,
+    price: 2900000,
+    description: "Тихий центр, 5 минут до набережной. Санузел совмещённый.",
+    images: [IMAGES[0], IMAGES[2]],
+  },
+  {
+    id: 22,
+    title: "2-комнатная квартира",
+    address: "ул. Ленина, 98",
+    rooms: 2,
+    area: 52,
+    floor: 8,
+    totalFloors: 12,
+    price: 4600000,
+    description: "Новостройка, чистовая отделка. Свободная планировка.",
+    images: [IMAGES[1], IMAGES[4]],
+  },
+  {
+    id: 23,
+    title: "Студия",
+    address: "ул. Памяти, 17",
+    rooms: 0,
+    area: 25,
+    floor: 6,
+    totalFloors: 10,
+    price: 2200000,
+    description: "Уютная студия с лоджией. Рядом ТЦ и остановки транспорта.",
+    images: [IMAGES[2], IMAGES[3]],
+  },
+  {
+    id: 24,
+    title: "3-комнатная квартира",
+    address: "ул. Димитрова, 36",
+    rooms: 3,
+    area: 70,
+    floor: 3,
+    totalFloors: 5,
+    price: 5700000,
+    description: "Кирпичный дом, большая кухня 12м². Два балкона застеклены.",
+    images: [IMAGES[3], IMAGES[0]],
+  },
+  {
+    id: 25,
+    title: "1-комнатная квартира",
+    address: "ул. Мира, 71",
+    rooms: 1,
+    area: 37,
+    floor: 6,
+    totalFloors: 9,
+    price: 3300000,
+    description: "После свежего ремонта, новая сантехника. Окна во двор.",
+    images: [IMAGES[0], IMAGES[1]],
+  },
+  {
+    id: 26,
+    title: "2-комнатная квартира",
+    address: "ул. Полярная, 42",
+    rooms: 2,
+    area: 56,
+    floor: 4,
+    totalFloors: 9,
+    price: 4300000,
+    description: "Семейный вариант, школа и садик во дворе. Кладовка на этаже.",
+    images: [IMAGES[1], IMAGES[2]],
+  },
+  {
+    id: 27,
+    title: "Студия",
+    address: "ул. Индивидуальная, 3",
+    rooms: 0,
+    area: 23,
+    floor: 1,
+    totalFloors: 5,
+    price: 1800000,
+    description: "Первый этаж, отдельный вход. Можно использовать как офис.",
+    images: [IMAGES[2], IMAGES[4]],
+  },
+  {
+    id: 28,
+    title: "3-комнатная квартира",
+    address: "ул. Карла Маркса, 55",
+    rooms: 3,
+    area: 85,
+    floor: 11,
+    totalFloors: 14,
+    price: 7800000,
+    description: "Пентхаус-формат, терраса 15м², панорама на реку. Эксклюзив!",
+    images: [IMAGES[3], IMAGES[4]],
+  },
+  {
+    id: 29,
+    title: "1-комнатная квартира",
+    address: "ул. Бабушкина, 28",
+    rooms: 1,
+    area: 34,
+    floor: 3,
+    totalFloors: 5,
+    price: 2700000,
+    description: "Бюджетный вариант, требуется косметика. Хорошая планировка.",
+    images: [IMAGES[0], IMAGES[3]],
+  },
+  {
+    id: 30,
+    title: "2-комнатная квартира",
+    address: "ул. Горького, 10",
+    rooms: 2,
+    area: 50,
+    floor: 5,
+    totalFloors: 9,
+    price: 4200000,
+    description: "Свежий ремонт, встроенная кухня. Остается вся бытовая техника.",
+    images: [IMAGES[1], IMAGES[0]],
+  },
+];
+
+export function getRandomApartments(count: number): Apartment[] {
+  const shuffled = [...apartments].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+}
+
+export function formatPrice(price: number): string {
+  return price.toLocaleString("ru-RU") + " ₽";
+}
+
+export function calculateScore(guess: number, actual: number): number {
+  const diff = Math.abs(guess - actual) / actual;
+  if (diff <= 0.05) return 100;
+  if (diff <= 0.1) return 85;
+  if (diff <= 0.15) return 70;
+  if (diff <= 0.2) return 55;
+  if (diff <= 0.3) return 40;
+  if (diff <= 0.5) return 25;
+  return 10;
+}
+
+export function getResultTitle(avgScore: number): string {
+  if (avgScore >= 70) return "Опытный инвестор";
+  if (avgScore >= 45) return "Щедрый инвестор";
+  return "Скряга";
+}
+
+export function getResultDescription(avgScore: number): string {
+  if (avgScore >= 70)
+    return "Вы отлично чувствуете рынок недвижимости! Ваши оценки максимально близки к реальным ценам.";
+  if (avgScore >= 45)
+    return "Вы склонны переплачивать за недвижимость. Попробуйте быть внимательнее к деталям объявлений.";
+  return "Вы экономный инвестор, но иногда занижаете стоимость. Рынок может удивить!";
+}
