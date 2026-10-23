@@ -1,0 +1,18 @@
+
+> pochem-dacha@1.0.0 build
+> npm run prepare:data && tsc -b && vite build
+
+
+> pochem-dacha@1.0.0 prepare:data
+> tsx scripts/prepare-data.ts
+
+Подготовлено объявлений: 15, пропущено без цены: 0. Диапазон бегунка: 0–9790000 ₽.
+vite v6.4.5 building for production...
+transforming...
+✓ 38 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.81 kB │ gzip:  0.48 kB
+dist/assets/index-Bqz4QUAy.css   18.86 kB │ gzip:  4.89 kB
+dist/assets/index--MO9J2N-.js   266.30 kB │ gzip: 82.93 kB
+✓ built in 4.60s
